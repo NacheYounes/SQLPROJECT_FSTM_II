@@ -1,5 +1,13 @@
+#EZSQLNY#
+_________________________________________________________________________
+
+--------------<C R E A T I O N_D'U N E_B A S E_D E_D O N N E E>----------
+_________________________________________________________________________
 CREATE DATABASE BD_ENTREPRISE;
 USE BD_ENTREPRISE;
+_________________________________________________________________________
+----------<C R E A T I O N_D E S_T A B L E S>--------------------------
+_________________________________________________________________________
 
 CREATE TABLE DEPARTEMENT(
 NUMDEPT INT NOT NULL AUTO_INCREMENT,
@@ -22,6 +30,9 @@ CONSTRAINT PK_MATR_1 PRIMARY KEY(MATR),
 CONSTRAINT FK_NUMDEPT_1 FOREIGN KEY(NUMDEPT) REFERENCES DEPARTEMENT(NUMDEPT));
 
 DESCRIBE EMPLOYE;
+_________________________________________________________________________
+------------------I N S E R T I O N_D E S_D O N N E E S------------------
+_________________________________________________________________________
 
 INSERT INTO DEPARTEMENT(NUMDEPT,NOMDEPT,LIEU) 
 VALUES
@@ -46,7 +57,9 @@ VALUES
 (900,'SANAE','SECRETAIRE',698,'1981-12-03',7600.00,NULL,3),
 (902,'IMANE','INGEGNIEUR',566,'1981-12-17',24000.00,NULL,2),
 (934,'MEHDI','SECRETAIRE',782,'1982-08-23',10400.00,NULL,1);
-
+_________________________________________________________________________
+--------------M A N I P U L A T I O N_D E S_D O N N E E S----------------
+_________________________________________________________________________
 SELECT * FROM EMPLOYE
 WHERE SALAIRE<COMM;
 
@@ -99,3 +112,4 @@ WHERE SUP=698;
 
 SELECT NOME FROM EMPLOYE
 WHERE SALAIRE >=ALL(SELECT SALAIRE FROM EMPLOYE);
+________________________________________________________________________
