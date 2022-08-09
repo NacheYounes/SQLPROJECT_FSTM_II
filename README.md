@@ -1,4 +1,4 @@
-#SQLPROJECT_FSTM_II#
+
 
 I finished this SQL Mini-Project using Mysql Software.
 
